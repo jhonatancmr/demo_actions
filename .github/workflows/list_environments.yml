@@ -23,18 +23,7 @@ jobs:
           npm install
           npm run build
           deploy-script --env=$ENVIRONMENT \
-            --app-name=$APP_NAME \
-            --db-host=$DB_HOST \
-            --db-port=$DB_PORT \
-            --db-user=$DB_USER \
-            --db-password=$DB_PASSWORD \
-            --secret-key=$SECRET_KEY
-    env:
-      DB_HOST: ${{ secrets.DB_HOST_${{ matrix.environment }} }}
-      DB_PORT: ${{ secrets.DB_PORT_${{ matrix.environment }} }}
-      DB_USER: ${{ secrets.DB_USER_${{ matrix.environment }} }}
-      DB_PASSWORD: ${{ secrets.DB_PASSWORD_${{ matrix.environment }} }}
-      SECRET_KEY: ${{ secrets.SECRET_KEY_${{ matrix.environment }} }}
+          
     inputs:
       environment:
         description: 'Selecciona un entorno'
