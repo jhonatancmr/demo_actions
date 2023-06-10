@@ -30,3 +30,4 @@ jobs:
         required: true
         default: 'DEV'
         options: ['DEV', 'STAGING', 'PRODUCTION']
+
